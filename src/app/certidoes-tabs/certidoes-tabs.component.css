@@ -1,0 +1,10 @@
+.iframe-container {
+  height: 80vh; /* Ajuste a altura conforme necessário */
+  width: 100%;
+}
+
+.iframe-container iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}
