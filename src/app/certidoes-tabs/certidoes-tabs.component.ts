@@ -1,10 +1,8 @@
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { Component } from '@angular/core';
-import { Observable, Observer } from 'rxjs';
-import { MatTabsModule } from '@angular/material/tabs';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Observable, Observer } from 'rxjs';
+import { ClrTabsModule } from '@clr/angular';	
 
 export interface TabelaCertidoes {
   label: string;
@@ -15,10 +13,8 @@ export interface TabelaCertidoes {
   selector: 'app-certidoes-tabs',
   imports: [
     CommonModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatProgressSpinnerModule,
     AsyncPipe,
+    ClrTabsModule,
   ],
   templateUrl: './certidoes-tabs.component.html',
   styleUrls: ['./certidoes-tabs.component.css'],

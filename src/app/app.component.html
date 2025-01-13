@@ -1,5 +1,24 @@
-<main>
-  <div>
-    <app-certidoes-tabs />
+<div class="main-container">
+  <header class="header-6">
+    <div class="branding">
+      <a routerLink="/" class="nav-link">
+        <cds-icon shape="cloud"></cds-icon>
+        <span class="title">Angular Doc-Cont</span>
+      </a>
+    </div>
+    <div class="header-nav">
+      <a routerLink="/" class="active nav-link nav-text">Home</a>
+      <a routerLink="/certidoes" class="nav-link nav-text">Certidões</a>
+    </div>
+    <div class="header-actions">
+      <a routerLink="/" class="nav-link nav-icon" aria-label="settings">
+        <cds-icon shape="cog"></cds-icon>
+      </a>
+    </div>
+  </header>
+  <div class="content-container">
+    <div class="content-area">
+      <router-outlet />
+    </div>
   </div>
-</main>
+</div>

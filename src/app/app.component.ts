@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { CertidoesTabsComponent } from "./certidoes-tabs/certidoes-tabs.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { ClarityModule } from '@clr/angular';
+import '@cds/core/icon/register.js';
+import { ClarityIcons, userIcon, cogIcon, cloudIcon } from '@cds/core/icon';
+import { CommonModule } from '@angular/common';
 
-
+ClarityIcons.addIcons(userIcon, cogIcon, cloudIcon);
 
 @Component({
   selector: 'app-root',
+  standalone: true,
   imports: [
+    CommonModule,
+    ClarityModule,
     RouterOutlet,
-    MatSlideToggleModule,
-    CertidoesTabsComponent
+    RouterLink
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
