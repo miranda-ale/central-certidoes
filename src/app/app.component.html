@@ -1,15 +1,15 @@
 <div class="main-container">
-  <header class="header-6">
+  <header class="header">
     <div class="branding">
       <a routerLink="/" class="nav-link">
         <cds-icon shape="cloud"></cds-icon>
         <span class="title">Angular Doc-Cont</span>
       </a>
     </div>
-    <div class="header-nav">
+    <!-- <div class="header-nav">
       <a routerLink="/" class="active nav-link nav-text">Home</a>
       <a routerLink="/certidoes" class="nav-link nav-text">Certidões</a>
-    </div>
+    </div> -->
     <div class="header-actions">
       <a routerLink="/" class="nav-link nav-icon" aria-label="settings">
         <cds-icon shape="cog"></cds-icon>
@@ -17,8 +17,34 @@
     </div>
   </header>
   <div class="content-container">
+    <clr-vertical-nav [clrVerticalNavCollapsible]="true">
+      <a clrVerticalNavLink routerLink="./">
+        <cds-icon shape="home" status="neutral" clrVerticalNavIcon></cds-icon>
+        Home
+      </a>
+      <clr-vertical-nav-group routerLinkActive="active" routerLink="./certidoes">
+        <a clrVerticalNavLink routerLink="./certidoes">
+        <cds-icon shape="folder" status="neutral" clrVerticalNavIcon></cds-icon>
+        Certidões</a>
+        <clr-vertical-nav-group-children>
+          <a clrVerticalNavLink href="https://consulta-crf.caixa.gov.br/consultacrf/pages/consultaEmpregador.jsf" target="_blank">
+            FGTS <cds-icon shape="pop-out" status="neutral" size="string"></cds-icon>
+          </a>
+          <a clrVerticalNavLink href="https://cndt-certidao.tst.jus.br/" target="_blank">
+            Trabalhista <cds-icon shape="pop-out" status="neutral" size="string"></cds-icon>
+          </a>
+        </clr-vertical-nav-group-children>
+      </clr-vertical-nav-group>
+      <a clrVerticalNavLink routerLinkActive="active" routerLink="./credit">
+        <cds-icon shape="certificate" clrVerticalNavIcon></cds-icon>
+        Credit
+      </a>
+    </clr-vertical-nav>
     <div class="content-area">
       <router-outlet />
     </div>
   </div>
 </div>
+
+
+

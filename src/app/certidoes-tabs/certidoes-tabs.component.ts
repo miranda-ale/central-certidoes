@@ -2,7 +2,7 @@ import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Observable, Observer } from 'rxjs';
-import { ClrTabsModule } from '@clr/angular';	
+import { ClrTabsModule } from '@clr/angular';
 
 export interface TabelaCertidoes {
   label: string;
@@ -42,18 +42,6 @@ export class CertidoesTabsComponent {
             label: 'Municipal',
             url: this.sanitizer.bypassSecurityTrustResourceUrl(
               'https://duc.prefeitura.sp.gov.br/certidoes/forms_anonimo/frmConsultaEmissaoCertificado.aspx'
-            ),
-          },
-          {
-            label: 'FGTS',
-            url: this.sanitizer.bypassSecurityTrustResourceUrl(
-              'https://consulta-crf.caixa.gov.br/consultacrf/pages/consultaEmpregador.jsf'
-            ),
-          },
-          {
-            label: 'Trabalhista',
-            url: this.sanitizer.bypassSecurityTrustResourceUrl(
-              'https://cndt-certidao.tst.jus.br/inicio.faces;jsessionid=wmtKd6-JXaDPJG_-f_JaLvlCD8-EmN9ivwKlp-qS.cndt-certidao-19-gp7xp'
             ),
           },
         ]);

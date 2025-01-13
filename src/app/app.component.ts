@@ -1,11 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
-import { ClarityModule } from '@clr/angular';
+import { ClarityIcons, cloudIcon, cogIcon, folderIcon, homeIcon, popOutIcon, userIcon } from '@cds/core/icon';
 import '@cds/core/icon/register.js';
-import { ClarityIcons, userIcon, cogIcon, cloudIcon } from '@cds/core/icon';
-import { CommonModule } from '@angular/common';
+import { ClarityModule } from '@clr/angular';
 
-ClarityIcons.addIcons(userIcon, cogIcon, cloudIcon);
+ClarityIcons.addIcons(userIcon, cogIcon, cloudIcon, homeIcon, folderIcon, popOutIcon);
 
 @Component({
   selector: 'app-root',
